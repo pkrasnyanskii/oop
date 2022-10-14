@@ -28,7 +28,18 @@ jacoco {
 }
  */
 jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
     reports {
         xml.required = true
+        //html.outputLocation = layout.buildDirectory.dir('jacocoHtml') Доп опция, чтобы у себя можно было открыть html
     }
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "Main.class",
+                    //"<package>.Main.class" Указывайте полное имея пакета с точками
+            ])
+        }))
+    }
+
 }
