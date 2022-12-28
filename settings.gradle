@@ -9,3 +9,5 @@
 
 rootProject.name = 'oop'
 include 'Task-1-1-1'
+include 'Task_1_2_2'
+
