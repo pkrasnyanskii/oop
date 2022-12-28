@@ -9,3 +9,7 @@
 
 rootProject.name = 'oop'
 include 'Task-1-1-1'
+include 'Task_1_3_1'
+include 'Task_1_3_1:src:main:test'
+findProject(':Task_1_3_1:src:main:test')?.name = 'test'
+
