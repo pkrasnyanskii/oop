@@ -29,7 +29,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
-                    "**/<java.com.krasnyanskii>.CalculatorTest.class",
+                    "**/<java.com.krasnyanskii>.GradebookTest.class",
                     //"<package>.Main.class" Указывайте полное имея пакета с точками
             ])
         }))
